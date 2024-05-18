@@ -25,7 +25,7 @@ export default function RecentlyViewedItem(props) {
                 style = {[ t.absolute,{width: squareSize, height: squareSize, borderRadius: 10}]}
                 resizeMode="cover"
             />
-            <Text style = {[t.bgTransparent, t.pL20, t.pY2, t.fontSemibold,{fontSize: wp(3), fontWeight: 500,color: ProjectColor.text}]}>{props.title}</Text>
+            <Text style = {[t.bgTransparent, t.pL20, t.pY2, t.fontSemibold,{fontSize: wp(3.3), fontWeight: 400,color: ProjectColor.text}]}>{props.title}</Text>
         </TouchableOpacity>
     )
 }

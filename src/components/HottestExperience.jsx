@@ -25,7 +25,7 @@ export default function HottestExperience({navigation}) {
     return(
         <View>
             <View style = {[t.wFull, t.flex, t.flexRow, t.justifyBetween, t.mB4]}>
-                <Text style = {[t.fontBold, t.fontSemibold, {fontSize: wp(4.5), fontWeight: 600, color: ProjectColor.color}]}>Top 10 trải nghiệm hot nhất</Text>
+                <Text style = {[t.fontBold, t.fontSemibold, {fontSize: wp(4.5), fontWeight: 600, color: ProjectColor.text}]}>Top 10 trải nghiệm hot nhất</Text>
             </View>
             <ScrollView horizontal showsHorizontalScrollIndicator={false} style = {[t.flex]}>
                 {

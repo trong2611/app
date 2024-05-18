@@ -34,29 +34,31 @@ export default function RecentlyViewed({navigation}) {
     return(
         <View>
             <View style = {[t.wFull, t.flex, t.flexRow, t.justifyBetween, t.mB4]}>
-                <Text style = {[t.fontBold, t.fontSemibold, {fontSize: wp(4.5), fontWeight: 600, color: ProjectColor.color}]}>Dịch vụ đã xem gần đây</Text>
+                <Text style = {[t.fontBold, t.fontSemibold, {fontSize: wp(4.5), fontWeight: 600, color: ProjectColor.text}]}>Dịch vụ đã xem gần đây</Text>
                 <TouchableOpacity>
                     <Text style = {[t.underline, {fontSize: wp (3.5)}]}>Xem thêm</Text>
                 </TouchableOpacity>
             </View>
             <ScrollView horizontal showsHorizontalScrollIndicator={false} style = {[t.flex]}>
-                <View style={[t.flexCol,t.justifyBetween]}>
-                    <FlatList
-                      data={row1}
-                      renderItem={renderItem}
-                      keyExtractor={(item) => item.key}
-                      horizontal
-                      showsHorizontalScrollIndicator={false}
-                      contentContainerStyle={[t.itemsCenter]}
-                    />
-                    <FlatList
-                      data={row2}
-                      renderItem={renderItem}
-                      keyExtractor={(item) => item.key}
-                      horizontal
-                      showsHorizontalScrollIndicator={false}
-                      contentContainerStyle={[t.itemsCenter,{width: wp(70), height: wp(15)}]}
-                    />
+                <View style = {[t.flex, t.flexCol, t.justifyBetween]}>
+                    <View style = {[t.flex, t.flexRow, t.justifyBetween]}>
+                    {
+                        row1 && row1.map((item,index) => {
+                            return (
+                                <RecentlyViewedItem key = {index.toString()}  image = {item.value.image} title = {item.value.title}/>
+                            )
+                        })
+                    }
+                    </View>
+                    <View style = {[t.flex, t.flexRow, t.justifyBetween]}>
+                    {
+                        row2 && row2.map((item,index) => {
+                            return (
+                                <RecentlyViewedItem key = {index.toString()}  image = {item.value.image} title = {item.value.title}/>
+                            )
+                        })
+                    }
+                    </View>
                 </View>
             </ScrollView>
         </View>

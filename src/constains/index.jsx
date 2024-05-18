@@ -71,7 +71,7 @@ export const DestinationData = [
     },
     {
         title: 'Seoul',
-        image: require('../../assets/img/img6.jpg')
+        image: require('../../assets/img/img1.jpg')
     }
 ]
 
@@ -79,3 +79,61 @@ export const DestinationData = [
 export const sortCategoryData = ['Tour & Trải nghiệm', 'Vé tham quan', 'Khách sạn', 'Di chuyển', 'Sự kiện & Triển lãm']
 
 export const placeholderData = ['Bangkok - Tour', 'núi bà đen', 'bà nà hill']
+
+export const loginScreenData = [
+    // {
+    //     colorStart: 'white',
+    //     colorEnd: 'white',
+    //     image: require('../../assets/img/pic/pic1-min.jpg')
+    // },
+    // {
+    //     colorStart: 'white',
+    //     colorEnd: 'white',
+    //     image:require('../../assets/img/pic/pic2-min.jpg')
+    // },
+    // {
+    //     colorStart: 'white',
+    //     colorEnd: 'white',
+    //     image:require('../../assets/img/pic/pic3-min.jpg')
+    // },
+    // {
+    //     colorStart: 'white',
+    //     colorEnd: 'white',
+    //     image:require('../../assets/img/pic/pic4-min.jpg')
+    // },
+    {
+        colorStart: 'white',
+        colorEnd: 'white',
+        image:require('../../assets/img/pic/pic6-min.jpg')
+    },
+    // {
+    //     colorStart: 'white',
+    //     colorEnd: 'white',
+    //     image:require('../../assets/img/pic/pic5-min.jpg')
+    // },
+
+]
+
+export const loginData = [
+    {
+        title: 'Facebook',
+        image: require('../../assets/img/login/facebook.png')
+    },
+    {
+        title: 'Google',
+        image: require('../../assets/img/login/google.png')
+    },
+    {
+        title: 'Apple',
+        image: require('../../assets/img/login/apple.png')
+    },
+    {
+        title: 'Email',
+        image: require('../../assets/img/login/mail.png')
+    },
+    {
+        title: 'Line',
+        image: require('../../assets/img/login/line.png')
+    },
+    
+]
