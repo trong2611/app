@@ -30,7 +30,7 @@ export default function LoginScreen({navigation}) {
     useEffect(() => {
       const interval = setInterval(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % loginScreenData.length);
-      }, 6000); 
+      }, 8000); 
       return () => clearInterval(interval);
     }, []);
 
@@ -48,7 +48,7 @@ export default function LoginScreen({navigation}) {
             <Animatable.Image
                 key={currentIndex}
                 animation={customZoomIn}
-                duration={6000} 
+                duration={8000} 
                 source={loginScreenData[currentIndex].image}
                 style = {[t.absolute,t.top0, t.wFull,{height:'65%'}]}
                 resizeMode="cover"
@@ -64,10 +64,11 @@ export default function LoginScreen({navigation}) {
             <View style={[t.absolute,t.wFull,t.justifyCenter,t.itemsCenter,{top:'40%'}]}>
                 <Text style = {[t.textWhite, t.fontSemibold,t.mB4,{fontWeight: 600, fontSize: wp(7)}]}>Đăng nhập / Đăng ký</Text>
                 <Text style = {[t.textWhite, t.fontSemibold,t.mB10,{fontWeight: 400, fontSize: wp(4)}]}>Khám phá địa điểm tiếp theo</Text>
+                <LoginButton icon = {loginData[0].image} name = {loginData[0].title}/>
                 <LoginButton icon = {loginData[1].image} name = {loginData[1].title}/>
                 <LoginButton icon = {loginData[2].image} name = {loginData[2].title}/>
                 <LoginButton icon = {loginData[3].image} name = {loginData[3].title}/>
-                <LoginButton icon = {loginData[4].image} name = {loginData[4].title}/>
+                {/* <LoginButton icon = {loginData[4].image} name = {loginData[4].title}/> */}
                 <ChevronDownIcon style = {[t.textWhite, t.mY2]}/>
             </View>
             {/* <XMarkIcon style = {[t.textWhite, t.mY16, t.mX8,{width: wp(10), height: wp(10)}]} onPress={() => {navigation.goBack()}}/> */}

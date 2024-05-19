@@ -10,4 +10,5 @@ export const ProjectColor = {
     iconColor: '#404040',
     tymcolor: opacity => `rgba(224, 224, 224, ${opacity})`,
     whiteRGBA: opacity => `rgba(225, 225, 225, ${opacity})`,
+    imgRGBA: opacity => `rgba(96, 96, 96, ${opacity})`,
 }
