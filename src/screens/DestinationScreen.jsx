@@ -42,7 +42,7 @@ export default function DestinationScreen({navigation}) {
     return(
         <View style = {[t.flex,t.flex1, t.itemsCenter,t.justifyStart]}>
             <View style = {[t.mX4, t.flexRow, t.mB2, t.bgTransparent, t.absolute, {top: wp(15), zIndex: 9999}]}>
-                <TouchableOpacity style = {[t.flexRow, t.itemsCenter, t.bgGray100, t.roundedFull, t.pX4, t.pY2, t.mX2, t.pL,{flex: 3}]} onPress={() => navigation.navigate('search_screen')}>
+                <TouchableOpacity style = {[t.flexRow, t.itemsCenter, t.bgGray100, t.roundedFull, t.pX4, t.pY3, t.mX2, t.pL,{flex: 3}]} onPress={() => navigation.navigate('search_screen')}>
                     <MagnifyingGlassIcon size={15} strokeWidth={4} color={ProjectColor.iconColor}/>
                     <TextInput
                       placeholder='Tìm điểm đến, hoạt động vui chơi hoặc các dịch vụ hiện có'
