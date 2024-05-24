@@ -80,36 +80,37 @@ export const sortCategoryData = ['Tour & Trải nghiệm', 'Vé tham quan', 'Kh�
 
 export const placeholderData = ['Bangkok - Tour', 'núi bà đen', 'bà nà hill']
 
+
 export const loginScreenData = [
     // {
     //     colorStart: 'white',
     //     colorEnd: 'white',
-    //     image: require('../../assets/img/pic/pic1-min.jpg')
+    //     image: 'https://github.com/trong2611/app/blob/main/assets/img/pic/pic1-min.jpg?raw=true'
     // },
     // {
     //     colorStart: 'white',
     //     colorEnd: 'white',
-    //     image:require('../../assets/img/pic/pic2-min.jpg')
+    //     image: 'https://github.com/trong2611/app/blob/main/assets/img/pic/pic2-min.jpg?raw=true'
     // },
     // {
     //     colorStart: 'white',
     //     colorEnd: 'white',
-    //     image:require('../../assets/img/pic/pic3-min.jpg')
+    //     image: 'https://github.com/trong2611/app/blob/main/assets/img/pic/pic3-min.jpg?raw=true'
     // },
     // {
     //     colorStart: 'white',
     //     colorEnd: 'white',
-    //     image:require('../../assets/img/pic/pic4-min.jpg')
+    //     image: 'https://github.com/trong2611/app/blob/main/assets/img/pic/pic4-min.jpg?raw=true'
     // },
     {
         colorStart: 'white',
         colorEnd: 'white',
-        image:require('../../assets/img/pic/pic6-min.jpg')
+        image: 'https://github.com/trong2611/app/blob/main/assets/img/pic/pic5-min.jpg?raw=true'
     },
     // {
     //     colorStart: 'white',
     //     colorEnd: 'white',
-    //     image:require('../../assets/img/pic/pic5-min.jpg')
+    //     image: 'https://github.com/trong2611/app/blob/main/assets/img/pic/pic6-min.jpg?raw=true'
     // },
 
 ]

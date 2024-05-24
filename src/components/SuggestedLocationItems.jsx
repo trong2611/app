@@ -43,7 +43,7 @@ export default function SuggestedLocationItem({navigation}) {
                 />
                 <Text style = {[t.fontSemibold, t.textWhite, t.pX5, {fontSize: wp(4), fontWeight: 700}]}>Top điểm đến săn hoa anh đào</Text>
             </View>
-            <View style={[t.flex, t.flexRow, t.justifyStart, t.flexWrap, t.itemsStart, t.wFull, {height: wp(20)}]}>
+            <View style={[t.flex, t.flexRow, t.justifyStart, t.flexWrap, t.itemsCenter, t.wFull, t.pY2]}>
                     {
                         data.map((item, index) => (
                             <SuggestedLocationItemButton key={index} index = {index}/>

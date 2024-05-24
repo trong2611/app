@@ -14,7 +14,7 @@ const categories = [
 
 const screenWidth = Dimensions.get('window').width;
 
-export default ScrollActive = () => {
+export default ScrollActive = ({navFixed}) => {
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
   const scrollViewRef = useRef(null);
   const horizontalScrollViewRef = useRef(null);
@@ -36,8 +36,8 @@ export default ScrollActive = () => {
   };
 
   return (
-    <View >
-      <ScrollView ref={horizontalScrollViewRef} horizontal showsHorizontalScrollIndicator={true} style = {[t.pY3, t.pX3]}>
+    <View>
+      <ScrollView ref={horizontalScrollViewRef} horizontal showsHorizontalScrollIndicator={true} style = {[t.pY3, t.pX3, navFixed ? [t.absolute] : {}] }>
         {categories.map((category, index) => (
           <TouchableOpacity key={category.id} style={[t.pX3, t.pY2, index == 0 ? [t.mR2, t.mL0] : t.mX2, t.hAuto]}
             onPress={() => handleCategoryPress(category, index)}
@@ -56,6 +56,7 @@ export default ScrollActive = () => {
         onMomentumScrollEnd={handleScroll}
         showsHorizontalScrollIndicator={false}
         style={[t.flex, t.mY6, t.flexRow]}
+        contentContainerStyle = {[navFixed ? {marginTop: wp(10)} : {}]}
       >
         <SuggestedLocation key={1}/>
         <SuggestedOrtherLocation key={2}/>

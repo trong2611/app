@@ -29,15 +29,19 @@ import SuggestedLocationItem from "./SuggestedLocationItems";
 const screenWidth = Dimensions.get('window').width;
 
 export default function SuggestedLocation({navigation}) {
-    navigate = useNavigation();
+    navigation = useNavigation();
     return(
-        <ScrollView showsVerticalScrollIndicator={false}>
+        <View>
             <View style={[t.flex, t.justifyStart, t.itemsStart, t.pX6, {width: screenWidth}]}>
                 <Text style = {[t.fontSemibold, t.mB3, {fontSize: wp(5), fontWeight: 700, color: ProjectColor.text}]}>Địa điểm phổ biến</Text>
                 <SuggestedLocationItem/>
                 <SuggestedLocationItem/>
                 <SuggestedLocationItem/>
+                <SuggestedLocationItem/>
+                <SuggestedLocationItem/>
+                <SuggestedLocationItem/>
+                <SuggestedLocationItem/>
             </View>
-        </ScrollView>
+        </View>
     )
 }

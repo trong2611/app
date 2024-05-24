@@ -44,12 +44,12 @@ export default function LoginScreen({navigation}) {
     };
 
     return(
-        <View style = {[t.flex,t.flex1, t.itemsStart,t.justifyStart]}>
+        <View style = {[t.flex,t.flex1, t.itemsStart,t.justifyStart, t.overflowHidden]}>
             <Animatable.Image
                 key={currentIndex}
                 animation={customZoomIn}
                 duration={8000} 
-                source={loginScreenData[currentIndex].image}
+                source={{ uri: loginScreenData[currentIndex].image }}
                 style = {[t.absolute,t.top0, t.wFull,{height:'65%'}]}
                 resizeMode="cover"
             />

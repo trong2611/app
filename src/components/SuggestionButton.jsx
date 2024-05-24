@@ -25,12 +25,12 @@ import * as Animatable from 'react-native-animatable';
 import Spinner from 'react-native-loading-spinner-overlay';
 import { useNavigation } from "@react-navigation/native";
 
-export default function SuggestionButton({item, index,  navigation}) {
+export default function SuggestionButton({item,  navigation}) {
 
     navigation = useNavigation();
 
     return(
-        <TouchableOpacity style = {[t.pX4, t.pY2, t.roundedFull, {backgroundColor: ProjectColor.tymcolor(0.3)}, index == 0 ? [t.mR1, t.mL0] : t.mX1]}>
+        <TouchableOpacity style = {[t.pX4, t.pY2, t.m1, t.roundedFull, {backgroundColor: ProjectColor.tymcolor(0.3)}]}>
             <Text>{item}</Text>
         </TouchableOpacity>
     )

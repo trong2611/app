@@ -35,7 +35,7 @@ export default function SearchScreen({navigation}) {
     return(
         <SafeAreaView style = {[t.flex,t.flex1, t.itemsCenter,t.justifyStart, t.bgWhite, t.flexCol]}>
             <View style = {[t.mX2, t.flexRow, t.mB2]}>
-                <TouchableOpacity style = {[t.flexRow, t.itemsCenter, t.bgGray100, t.roundedFull, t.pX4, t.pY3, t.mX2, t.pL,{flex: 3}]} onPress={() => navigation.navigate('search_screen')}>
+                <TouchableOpacity style = {[t.flexRow, t.itemsCenter, t.bgGray100, t.roundedFull, t.pX4, t.pY3, t.mX2, t.pL,{flex: 3}]}>
                     <MagnifyingGlassIcon size={15} strokeWidth={4} color={ProjectColor.iconColor}/>
                     <TextInput
                       placeholder='Tìm điểm đến, hoạt động vui chơi hoặc các dịch vụ hiện có'
@@ -53,7 +53,7 @@ export default function SearchScreen({navigation}) {
                 </View>
             </View>
             <ScrollView showsVerticalScrollIndicator={false} style = {[t.pX6, {paddingVertical: wp(5)}, t.wFull]}>
-                <Suggestion title='Lịch sử tìm kiếm' data={['BangKok', 'Tokyo', 'đà nẵng', 'tàm kì', 'hà nội']}/> 
+                <Suggestion title='Lịch sử tìm kiếm' data={['BangKok', 'Tokyo', 'đà nẵng', 'tàm kì', 'hà nội', 'vịnh hạ long', 'Thành phố hồ chí minh']}/> 
                 <Suggestion title='Tìm kiếm nhiều nhất' data = {['Việt Nam', 'bà nà hill', 'ine']}/>
                 <View style = {[t.wFull, t.flex, t.flexCol]}>
                     

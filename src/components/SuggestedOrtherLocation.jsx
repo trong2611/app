@@ -32,7 +32,7 @@ const data = ['hà nội', 'đà nẵng','tp. hồ chí minh','hội an', 'nha t
 export default function SuggestedOrtherLocation({navigation}) {
     navigate = useNavigation();
     return(
-        <ScrollView showsVerticalScrollIndicator={false}>
+        <View showsVerticalScrollIndicator={false}>
             <View style={[t.flex, t.flexCol, t.justifyCenter, t.itemsCenter, {width: screenWidth}]}>
                 <View style={[t.flex, t.flexRow, t.justifyBetween, t.itemsCenter, t.pX6, t.mB6, {width: screenWidth}]}>
                     <Text style = {[t.fontSemibold, {fontSize: wp(5), fontWeight: 700, color: ProjectColor.text}]}>Việt Nam</Text>
@@ -46,6 +46,6 @@ export default function SuggestedOrtherLocation({navigation}) {
                     }
                 </View>
             </View>
-        </ScrollView>
+        </View>
     )
 }

@@ -33,17 +33,15 @@ export default function Suggestion({title, data, navigation}) {
     return(
         <View style = {[t.wFull, t.justifyStart, t.itemsStart, t.hAuto, t.mY3]}>
             <Text style = {[t.fontSemibold, t.mB3, {color: ProjectColor.text, fontSize: wp(3.5), fontWeight: 800}]}>{title}</Text>
-            <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-                <View style = {[t.wFull, t.justifyStart, t.itemsStart, t.hAuto, t.flexRow, t.overflowHidden]}>
+                <View style = {[t.wFull, t.justifyStart, t.itemsCenter, t.hAuto, t.flexRow, t.flexWrap]}>
                     {
                         data && data.map((item,index) => {
                             return (
-                                <SuggestionButton key = {index.toString()}  item = {item} index = {index}/>
+                                <SuggestionButton key = {index.toString()}  item = {item} />
                             )
                         })
                     }
                 </View>
-            </ScrollView>
         </View>
     )
 }

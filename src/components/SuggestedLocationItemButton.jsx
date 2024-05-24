@@ -28,9 +28,9 @@ import { useNavigation } from "@react-navigation/native";
 const screenWidth = Dimensions.get('window').width;
 
 export default function SuggestedLocationItemButton({index,navigation}) {
-    navigate = useNavigation();
+    navigation = useNavigation();
     return(
-        <TouchableOpacity style = {[t.pX4, t.pY2, t.mX2, t.mY1, {borderWidth: 1, borderColor: ProjectColor.tymcolor(0.5), borderRadius: 10}]}>
+        <TouchableOpacity style = {[t.pX4, t.pY2, t.mX2, t.mY1, {borderWidth: 1, borderColor: ProjectColor.tymcolor(0.5), borderRadius: 10}]}  onPress={() => navigation.navigate('state_screen')}>
             <Text style = {{ color: ProjectColor.text }}>Osaka</Text>
         </TouchableOpacity>
     )

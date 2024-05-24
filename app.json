@@ -15,7 +15,17 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "app.authenwithgoole",
+      "supportsTablet": true,
+      "infoPList": {
+        "CFBundleURLTypes":[
+          {
+            "CFBundleURLSchemes":[
+              "com.googleusercontent.apps.659044877070-60q8moc2779f491k8v95a83o6sd4n6t6"
+            ]
+          }
+        ]
+      }
     },
     "android": {
       "adaptiveIcon": {
