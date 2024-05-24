@@ -8,11 +8,11 @@ module.exports = (sequelize, DataTypes) => {
    
     static associate(models) {
       TicketTimeline.belongsTo(models.TimeLine, {foreignKey: 'timlineId', targetKey: 'id'})
-      TicketTimeline.belongsTo(models.Ticket, {foreignKey: 'ticketId', targetKey: 'id'})
+      TicketTimeline.belongsTo(models.SubTicket, {foreignKey: 'subTicketId', targetKey: 'id'})
     }
   }
   TicketTimeline.init({
-    ticketId: DataTypes.BIGINT,
+    subTicketId: DataTypes.BIGINT,
     timlineId: DataTypes.BIGINT,
     quantity: DataTypes.INTEGER
   }, {

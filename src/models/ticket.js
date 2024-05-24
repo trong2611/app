@@ -13,8 +13,8 @@ module.exports = (sequelize, DataTypes) => {
       Ticket.hasMany(models.TicketDiscount, {foreignKey: 'ticketId'})
       Ticket.hasMany(models.Schedule, {foreignKey: 'ticketId'})
       Ticket.hasMany(models.DetailDescription, {foreignKey: 'ticketId'})
-      // Ticket.hasMany(models.TicketCategory, {foreignKey: 'ticketId'})
-      Ticket.hasMany(models.TicketTimeline, {foreignKey: 'ticketId'})
+      Ticket.hasMany(models.SubTicket, {foreignKey: 'ticketId'})
+      // Ticket.hasMany(models.TicketTimeline, {foreignKey: 'ticketId'})
       Ticket.hasMany(models.TicketImage, {foreignKey: 'ticketId'})
       Ticket.hasMany(models.BookingDetail, {foreignKey: 'ticketId'})
       Ticket.hasMany(models.ViewHistory, {foreignKey: 'ticketId'})
@@ -22,7 +22,6 @@ module.exports = (sequelize, DataTypes) => {
   }
   Ticket.init({
     name: DataTypes.STRING,
-    price: DataTypes.DOUBLE,
     departureAddress: DataTypes.STRING,
     destinationAddress: DataTypes.STRING,
     note: DataTypes.TEXT,

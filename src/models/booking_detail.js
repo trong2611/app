@@ -7,12 +7,12 @@ module.exports = (sequelize, DataTypes) => {
    
     static associate(models) {
       BookingDetail.belongsTo(models.QRStatus, {foreignKey: 'qrStatusId', targetKey: 'id'})
-      BookingDetail.belongsTo(models.Ticket, {foreignKey: 'ticketId', targetKey: 'id'})
+      BookingDetail.belongsTo(models.SubTicket, {foreignKey: 'subTicketId', targetKey: 'id'})
       BookingDetail.belongsTo(models.Booking, {foreignKey: 'bookingId', targetKey: 'id'})
     }
   }
   BookingDetail.init({
-    ticketId: DataTypes.BIGINT,
+    subTicketId: DataTypes.BIGINT,
     quantity: DataTypes.INTEGER,
     unitPrice: DataTypes.DOUBLE,
     totalPrice: DataTypes.DOUBLE,
