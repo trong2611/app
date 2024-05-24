@@ -55,7 +55,7 @@ export default function DestinationScreen({navigation}) {
 
     return(
         <View style = {[t.flex,t.flex1, t.itemsCenter,t.justifyStart, t.bgWhite]}>
-            <Animated.View style = {[t.flex, t.justifyEnd, t.itemsStart, t.overflowHidden, {height: wp(60), width: '100%'}, imageAnimation]}>
+            <View style = {[t.flex, t.justifyEnd, t.itemsStart, t.overflowHidden, {height: wp(60), width: '100%'}]}>
                     <Image source={require('../../assets/img/img11.jpg')} style = {[t.absolute, t.wFull, t.hFull]} resizeMode="cover"/>
                     <LinearGradient
                     colors={[ProjectColor.imgRGBA(0.5), ProjectColor.imgRGBA(0.4)]}
@@ -63,8 +63,9 @@ export default function DestinationScreen({navigation}) {
                     start={{ x: 0.5, y: 0 }}
                     end={{ x: 0.5, y: 1 }}
                     />
-            </Animated.View>
-            <View style = {[t.pX6, t.wFull, t.flexCol, t.bgTransparent, t.absolute, {top: 0, height: wp(60), paddingTop: wp(15)}, navFixed ? t.bgWhite : t.bgTransparent]}>
+                    <Text style = {[t.fontSemibold, t.textWhite, t.pX6, t.pY10,{fontSize: wp(6), fontWeight: 800, bottom:wp(5)}, t.absolute]}>Khám phá thế giới</Text>
+            </View>
+            <View style = {[t.pX6, t.wFull, t.flexCol, t.bgTransparent, t.absolute, {top: 0, height: wp(30), paddingTop: wp(15), zIndex: 9999}, navFixed ? t.bgWhite : t.bgTransparent]}>
                 <TouchableOpacity style = {[t.flexRow, t.itemsCenter, t.bgGray100, t.roundedFull, t.pX4, t.pY3]} onPress={() => navigation.navigate('search_screen')}>
                     <MagnifyingGlassIcon size={15} strokeWidth={4} color={ProjectColor.iconColor}/>
                     <TextInput
@@ -74,9 +75,8 @@ export default function DestinationScreen({navigation}) {
                       editable = {false}
                     />
                 </TouchableOpacity>
-                <Text style = {[t.fontSemibold, t.textWhite, t.pX6, t.pY10,{fontSize: wp(6), fontWeight: 800, bottom:0}, t.absolute]}>Khám phá thế giới</Text>
             </View>
-            <Animated.ScrollView style = {[t.flex1, t.wFull, t.hFull, t.absolute]} showsVerticalScrollIndicator={false}
+            <Animated.ScrollView style = {[t.flex1, t.wFull, t.hFull, t.absolute]} bounces={false} showsVerticalScrollIndicator={false}
                 onScroll={Animated.event([
                     { nativeEvent: { contentOffset: { y: scrollY } } }],
                     {useNativeDriver: true,
@@ -92,7 +92,9 @@ export default function DestinationScreen({navigation}) {
                 )}
                 scrollEventThrottle={16}
             >
-                <View style = {[t.wFull,{height: wp(55)}]}></View>
+                <View style = {[t.wFull,{height: wp(55)}]}>
+                    
+                </View>
                 <View style = {[t.wFull, t.bgWhite, {borderRadius: 10}]}>
                     <ScrollActive navFixed = {navFixed}/>
                 </View>
