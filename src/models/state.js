@@ -14,7 +14,8 @@ module.exports = (sequelize, DataTypes) => {
   }
   State.init({
     name: DataTypes.STRING,
-    countryId: DataTypes.BIGINT
+    countryId: DataTypes.BIGINT,
+    map: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'State',
