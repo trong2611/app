@@ -67,7 +67,7 @@ export default function LoginScreen({navigation}) {
                 <LoginButton icon = {loginData[0].image} name = {loginData[0].title}/>
                 <LoginButton icon = {loginData[1].image} name = {loginData[1].title}/>
                 <LoginButton icon = {loginData[2].image} name = {loginData[2].title}/>
-                <LoginButton icon = {loginData[3].image} name = {loginData[3].title}/>
+                <LoginButton icon = {loginData[3].image} name = {loginData[3].title} link = 'login_component'/>
                 {/* <LoginButton icon = {loginData[4].image} name = {loginData[4].title}/> */}
                 <ChevronDownIcon style = {[t.textWhite, t.mY2]}/>
             </View>

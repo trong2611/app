@@ -8,6 +8,10 @@ import BottomTabs from './BottomTabs';
 import LoginScreen from '../screens/LoginScreen';
 import SearchScreen from '../screens/SearchScreen';
 import StateScreen from '../screens/StateScreen';
+import LoginComponent from '../components/login/LoginConponent';
+import RegisterComponent from '../components/login/RegisterComponent';
+import ForgetPassword from '../components/login/ForgetPassword';
+import ForgetPasswordComponent from '../components/login/ForgetPassword';
 
 const Stack = createNativeStackNavigator();
 
@@ -20,6 +24,9 @@ export default function Navigation() {
         <Stack.Screen name="login_screen" component={LoginScreen} />
         <Stack.Screen name="search_screen" component={SearchScreen} />
         <Stack.Screen name="state_screen" component={StateScreen} />
+        <Stack.Screen name="login_component" component={LoginComponent} />
+        <Stack.Screen name="register_component" component={RegisterComponent} />
+        <Stack.Screen name="forgetpassword_component" component={ForgetPasswordComponent} />
       </Stack.Navigator>
     </NavigationContainer>
   );
